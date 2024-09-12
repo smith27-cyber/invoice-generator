@@ -44,7 +44,7 @@ Getting Started
 
     bash
 
-git clone https://github.com/your-username/invoice-generator.git
+git clone https://github.com/smith27-cyber/invoice-generator.git
 cd invoice-generator
 
 Install dependencies:
