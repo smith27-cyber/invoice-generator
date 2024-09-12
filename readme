@@ -1,1 +1,144 @@
+Invoice Generator
 
+A simple invoice generation system built with Node.js, Express, SQLite, and PDFKit. This application allows users to create and download invoices as PDF files, storing invoice data in an SQLite database.
+Features
+
+    Generate invoices with customer details, service descriptions, and pricing.
+    Automatically save invoice data to an SQLite database.
+    Export invoices as downloadable PDF files.
+    Simple web form for input via a user-friendly interface.
+
+Project Structure
+
+php
+
+invoice-generator/
+│
+├── public/
+│   ├── css/
+│   │   └── style.css          # CSS for styling the front-end form
+│   └── invoices/              # Folder where generated PDF invoices are saved
+│
+├── views/
+│   └── invoice_form.ejs        # EJS template for the invoice form
+│
+├── routes/
+│   └── invoice.js              # Express routes for invoice generation
+│
+├── app.js                      # Main Node.js/Express application
+├── invoices.db                 # SQLite database (automatically generated)
+├── package.json                # Node.js dependencies and scripts
+└── README.md                   # Project documentation
+
+Prerequisites
+
+To run this project, you'll need:
+
+    Node.js (v14+ recommended)
+    npm (Node package manager)
+    SQLite (Automatically created by the app)
+
+Getting Started
+
+    Clone the repository:
+
+    bash
+
+git clone https://github.com/your-username/invoice-generator.git
+cd invoice-generator
+
+Install dependencies:
+
+Inside the project directory, run the following command to install all necessary dependencies:
+
+bash
+
+npm install
+
+Run the application:
+
+Start the Node.js server:
+
+bash
+
+npm start
+
+Access the application:
+
+Open your browser and go to:
+
+bash
+
+    http://localhost:3000/invoice/
+
+    Generate an invoice:
+        Fill out the invoice form with customer details, services provided, quantity, and price.
+        The invoice will be generated and a PDF file will be downloaded.
+
+Usage
+Form Fields:
+
+    Customer Name: The name of the customer receiving the invoice.
+    Customer Email: Email address of the customer.
+    Date: Date of invoice creation.
+    Service/Product Details: Description of the services/products provided.
+    Quantity: Number of items/services provided.
+    Price (per unit): Cost per item/service.
+
+Once you submit the form, a PDF invoice will be generated and saved in the public/invoices/ directory, and will automatically be downloaded to your machine.
+Technologies Used
+
+    Node.js: JavaScript runtime environment.
+    Express.js: Web framework for Node.js.
+    EJS: Templating engine for generating HTML.
+    PDFKit: Library for generating PDF documents.
+    SQLite: Lightweight, serverless database engine.
+
+Project Dependencies
+
+All the required dependencies are listed in the package.json file. Here’s a brief overview:
+
+json
+
+{
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "pdfkit": "^0.12.3",
+    "sqlite3": "^5.0.0"
+  }
+}
+
+To install them, run:
+
+bash
+
+npm install
+
+Possible Enhancements
+
+    Add validation to form inputs.
+    Implement user authentication to keep track of invoices per user.
+    Add the ability to view, edit, and delete previously created invoices.
+    Improve invoice styling (PDF layout).
+
+Troubleshooting
+
+    Port Conflict: If port 3000 is in use, change the port in app.js:
+
+    javascript
+
+const PORT = process.env.PORT || 3000;
+
+Missing directories: If you encounter an error like ENOENT: no such file or directory, ensure that the public/invoices directory is created:
+
+bash
+
+    mkdir -p public/invoices
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+Author
+
+Created by NYERO PAUL SMITH - feel free to reach out with questions or feedback!
