@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Invoice Generator</h2>
+        <form action="/invoice/create" method="POST">
+            <label for="customerName">Customer Name</label>
+            <input type="text" id="customerName" name="customerName" placeholder="Customer Name" required>
+
+            <label for="customerEmail">Customer Email</label>
+            <input type="email" id="customerEmail" name="customerEmail" placeholder="Customer Email" required>
+
+            <label for="invoiceDate">Date</label>
+            <input type="date" id="invoiceDate" name="invoiceDate" required>
+
+            <label for="serviceDetails">Service/Product Details</label>
+            <textarea id="serviceDetails" name="serviceDetails" rows="4" placeholder="Enter service/product details" required></textarea>
+
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" placeholder="Quantity" required>
+
+            <label for="price">Price (per unit)</label>
+            <input type="number" id="price" name="price" step="0.01" placeholder="Price" required>
+
+            <button type="submit">Generate Invoice</button>
+        </form>
+    </div>
+</body>
+</html>

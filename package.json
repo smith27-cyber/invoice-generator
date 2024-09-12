@@ -1,0 +1,16 @@
+{
+    "name": "invoice-generator",
+    "version": "1.0.0",
+    "description": "Simple invoice generation app with Node.js",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "dependencies": {
+      "ejs": "^3.1.6",
+      "express": "^4.17.1",
+      "pdfkit": "^0.12.3",
+      "sqlite3": "^5.0.0"
+    }
+  }
+  
